@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#040404"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <LinearLayout
+            android:id="@+id/labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#040404"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/ticker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="33.3"
+                android:paddingLeft="15dp"
+                android:text="TICKER"
+                android:textColor="#FFFF00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="33.3"
+                android:paddingLeft="115dp"
+                android:text="CHANGE"
+                android:textColor="#FFFF00"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="33.3"
+                android:paddingLeft="70dp"
+                android:paddingRight="10dp"
+                android:text="PRICE"
+                android:textColor="#FFFF00"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#040404"
+            android:scrollbars="horizontal|vertical" />
+
+
+    </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
